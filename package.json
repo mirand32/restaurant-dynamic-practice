@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-dynamic-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private":true,
+  "scripts": {
+    "start":"webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirand32/restaurant-dynamic-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirand32/restaurant-dynamic-practice/issues"
+  },
+  "homepage": "https://github.com/mirand32/restaurant-dynamic-practice#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
