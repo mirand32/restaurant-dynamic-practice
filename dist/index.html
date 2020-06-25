@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Set fixed hero -->
+    <div class="background"></div>
+    <!-- Navbar -->
     <nav>
         <h1>Stefan's Pub</h1>
-        <ul class="nav">
-            <li class="nav--item" id="starters">Starters</li>
-            <li class="nav--item" id="mains">Main</li>
-            <li class="nav--item" id="desserts">Desserts/li>
-            <li class="nav--item" id="drinks">Drinks</li>
-        </ul>
+        <div class="nav">
+            <div>
+                <input  type="radio" id="starters" name="drone" checked>
+                <label class="nav--item" for="starters">Starters</label>
+            </div>
+            
+            <div>
+                <input  type="radio" id="mains" name="drone">
+                <label class="nav--item" for="mains">Mains</label>
+            </div>
+            
+            <div>
+                <input  type="radio" id="desserts" name="drone">
+                <label class="nav--item" for="desserts">Desserts</label>
+            </div>
+            <div>
+                <input  type="radio" id="drinks" name="drone">
+                <label class="nav--item" for="drinks">Drinks</label>
+            </div>
+        </div>
     </nav>
+    <!-- Place menu items in here -->
     <div id="content"></div>
     <script src="./main.js"></script>
 </body>

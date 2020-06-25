@@ -1,19 +1,21 @@
-const createDiv = (item, price) =>{
-    const element = document.createElement("div")
-    element.classList.add("menu-item")
-    element.innerHTML=`${item}:$${price}`
-    content.appendChild(element)
-}
-
+// imports
+import menu from "./menu"
+import generateMenuItem from "./generateMenuItem"
+import "./main.scss";
+// create variable for where content is placed
 const content=document.querySelector("#content")
-createDiv("dumplings", 3.00)
-createDiv("chicken", 4.00)
 
-const menu = {
-    "starters":[
-        {img,name,description,price}
-    ],
-    "mains":[],
-    "desserts":[],
-    "drinks":[]
+// update page on click
+function updatePage(){
+    // get id of button from navbar
+    const id = this.attributes.for.value;
+    // use id to find appropriate object of menu items
+    const sectionArray=(menu[id])
+    // set content to newly generated menu items
+    content.innerHTML=generateMenuItem(sectionArray)
 }
+
+content.innerHTML=generateMenuItem(menu.starters)
+// Make nav buttons clickable to generate content
+const menuButtons = document.querySelectorAll(".nav--item")
+menuButtons.forEach(button=>button.addEventListener("click", updatePage))
